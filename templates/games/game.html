@@ -5,26 +5,81 @@ Games
 {% block gamesactive %}
 active
 {% endblock gamesactive %}
-
+{% block css %}
+<style>
+    .game{
+        display:flex;
+        
+        justify-content:center;
+        align-items:center;
+    }
+    .gameCard{
+        margin-top:20px;
+        transition:all ease 0.5s;
+    }
+    .gameCard:hover{
+        transform:scale(1.1);
+    }
+   
+   img{
+       height:200px;
+       width:200px;
+       border-radius:50%;
+       object-fit:cover;
+   }
+   .card{
+       width:100%;
+   }
+   .data{
+      
+   }
+   
+</style>
+{%endblock css%}
 
 
 {% block body %}
-<div class="card mb-3">
-    <img src="" class="card-img-top" alt="..." >
-    <div class="card-body">
-        <h5 class="card-title">WORD BEATER</h5>
-        <p class="card-text">This game will test your typing skills and speed.</p>
-        <a href="/wordbeater" target="_blank"><button id="myBtn" class="btn btn-primary ">Play</button></a>
+<div class="data row container ml-5">
+    <div class="col col-md-4 col-sm-6 col-xs-12 gameCard">
+        <div class="card mb-3 container mt-3 bg-dark text-white game">
+            <div class="">
+                <img src="{{user.last_name}}" class="card-img-top" alt="..."   >
+            </div>
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">WORD BEATER</h5>
+                <p class="card-text">This game will test your typing skills and speed.</p>
+                <a href="/wordbeater" target="_blank"><button id="myBtn" class="btn btn-success " style="width:220px">Play</button></a>
+            </div>
+        </div>
     </div>
+    
+     <div class="col col-md-4 col-sm-6 col-xs-12 gameCard"> 
+        <div class="card mb-3 container mt-3 bg-dark text-white game">
+            <div class="">
+                <img src="{{user.last_name}}" class="card-img-top" alt="..."   >
+            </div>
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">WORD BEATER</h5>
+                <p class="card-text">This game will test your typing skills and speed.</p>
+                <a href="/wordbeater" target="_blank"><button id="myBtn" class="btn btn-success " style="width:220px">Play</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-4 col-sm-6 col-xs-12 gameCard"> 
+        <div class="card mb-3 container mt-3 bg-dark text-white game">
+            <div class="">
+                <img src="{{user.last_name}}" class="card-img-top" alt="..."   >
+            </div>
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">WORD BEATER</h5>
+                <p class="card-text">This game will test your typing skills and speed.</p>
+                <a href="/wordbeater" target="_blank"><button id="myBtn" class="btn btn-success " style="width:220px">Play</button></a>
+            </div>
+        </div>
+    </div>
+    
 </div>
-<div class="card mb-3">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">WORD BEATER</h5>
-        <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-            This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-    </div>
+    
 </div>
 
 {% endblock body %}

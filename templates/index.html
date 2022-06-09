@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/f377a2cfce.js" crossorigin="anonymous"></script>
     <title>Chat, world!</title>
     <style>
         body {
@@ -193,12 +194,17 @@
         span:hover{
             color:gray;
         }
+        i{
+            font-size:30px;
+            cursor:pointer;
+        }
         
     </style>
 </head>
 
 <body class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href='/'><i class="fa-solid fa-arrow-left-long text-white"></i></a>
         <div class="container-fluid">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;"
@@ -296,7 +302,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                   
                     <li class="nav-item">
+                        
                         <a class="nav-link active" aria-current="page" href="#">Hello <span> {{user.username}} </span>,
                             Welcome to group discussion
                         </a>

@@ -22,7 +22,7 @@
             width: 350px;
             margin-top: auto;
             margin-bottom: auto;
-            background: #74cfbf;
+            background: linear-gradient(45deg, #7b00e0, #ae31d9);
             position: relative;
             display: flex;
             justify-content: center;
@@ -74,7 +74,7 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
     <div class="container h-100">
         <div class="d-flex justify-content-center h-100">
             <div class="user_card">
@@ -125,13 +125,14 @@
                             <div class="input-group-append">
                                 
                             </div>
-                            <label for="cars">Choose a course:</label><br>
+                            <label for="cars" class="text-white">Choose a course:</label><br>
 
-                            <select name="cars" id="cars">
-                                <option value="volvo">Python</option>
-                                <option value="saab">C</option>
-                                <option value="mercedes">Java</option>
-                                <option value="audi">C++</option>
+                            <select name="cars" id="cars" class="ml-4">
+                                <option value="">Select Language</option>
+                                <option value="PYTHON">PYTHON</option>
+                                <option value="C">C</option>
+                                <option value="JAVA">JAVA</option>
+                                <option value="CPP">CPP</option>
                             </select>
                         </div>
 
@@ -146,7 +147,7 @@
 
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links">
-                        Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+                        <span class="text-white">Already have an account?</span> <a href="{% url 'login' %}" class="ml-2 text-dark">Login</a>
                     </div>
                 </div>
             </div>
