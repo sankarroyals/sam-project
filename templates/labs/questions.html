@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}
+question
+{% endblock title %}
+
+
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col" id="optons">
+           
+                <select name="languages" id="languages">
+                    <option value="">Select Language</option>
+                
+                    <option value="python" id="python">python</option>
+                    <option value="java" id="java">java</option>
+                    <option value="c" id="c">c</option>
+                    <option value="cpp" id="cpp">c++</option>
+                    
+                
+                </select>
+            <div id="ques">
+                <p style="color: white;">{{que.question}}</p>
+            </div>
+           
+        </div>
+        <div class="col">
+            <div id="compiler">
+
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% block js %}
+<script>
+    const languages = document.getElementById('languages')
+    
+    
+
+    languages.addEventListener('change', function () {
+        const language = languages.value
+        if (language === 'python') {
+            document.getElementById('compiler').innerHTML = '<iframe src="https://trinket.io/embed/python/3d8d7ce66b?toggleCode=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>'
+        } 
+        else if(language=='java'){
+            document.getElementById('compiler').innerHTML = '<iframe src="https://trinket.io/embed/java/31da6af4e1?toggleCode=true" width="100%" height="536" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>'
+        }
+        else if(language=='c'){
+            document.getElementById('compiler').innerHTML = '<iframe src="" width="100%" height="356" frameborder="0" marginwidth="0" marginheight = "0" allowfullscreen ></iframe >'
+        }
+        else if(language=='cpp'){
+            document.getElementById('compiler').innerHTML = '<iframe src="" width="100%" height="356" frameborder="0" marginwidth="0" marginheight = "0" allowfullscreen ></iframe >'
+        }
+    });
+
+
+</script>
+{% endblock js %}
+{% endblock body %}
